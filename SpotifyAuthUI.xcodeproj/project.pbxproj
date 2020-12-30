@@ -13,6 +13,8 @@
 		09BA3280259C758D00B168E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BA327F259C758C00B168E4 /* Assets.xcassets */; };
 		09BA3283259C758D00B168E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BA3282259C758D00B168E4 /* Preview Assets.xcassets */; };
 		09BA3286259C758D00B168E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BA3284259C758D00B168E4 /* LaunchScreen.storyboard */; };
+		09BA3299259C80A300B168E4 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09BA3297259C80A300B168E4 /* Gotham-Bold.otf */; };
+		09BA32A2259C819200B168E4 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09BA32A1259C819200B168E4 /* Gotham-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		09BA3282259C758D00B168E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09BA3285259C758D00B168E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09BA3287259C758D00B168E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09BA3297259C80A300B168E4 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		09BA32A1259C819200B168E4 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		09BA3278259C758C00B168E4 /* SpotifyAuthUI */ = {
 			isa = PBXGroup;
 			children = (
+				09BA3291259C787800B168E4 /* Fonts */,
 				09BA3279259C758C00B168E4 /* AppDelegate.swift */,
 				09BA327B259C758C00B168E4 /* SceneDelegate.swift */,
 				09BA327D259C758C00B168E4 /* ContentView.swift */,
@@ -73,6 +78,15 @@
 				09BA3282259C758D00B168E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09BA3291259C787800B168E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				09BA3297259C80A300B168E4 /* Gotham-Bold.otf */,
+				09BA32A1259C819200B168E4 /* Gotham-Medium.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BA3299259C80A300B168E4 /* Gotham-Bold.otf in Resources */,
 				09BA3286259C758D00B168E4 /* LaunchScreen.storyboard in Resources */,
 				09BA3283259C758D00B168E4 /* Preview Assets.xcassets in Resources */,
 				09BA3280259C758D00B168E4 /* Assets.xcassets in Resources */,
+				09BA32A2259C819200B168E4 /* Gotham-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
