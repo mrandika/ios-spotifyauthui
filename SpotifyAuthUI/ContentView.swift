@@ -36,47 +36,74 @@ struct ContentView: View {
                     }.foregroundColor(.white)
                     
                     Group {
-                        Button(action: {
-                            print("[AUTHVIEW] Signup Button Pressed")
-                        }, label: {
-                            Text("SIGN UP FREE")
-                                .frame(maxWidth: .infinity, maxHeight: 45)
-                                .background(Color.green)
-                                .cornerRadius(50)
-                        }).padding(.top, 16)
+                        PrimaryButton(text: "Sign Up Free")
+                            .padding(.top, 16)
                         
                         ForEach(thirdParty, id: \.self) {service in
-                            Button(action: {
-                                print("[AUTHVIEW] \(service) Button Pressed")
-                            }, label: {
-                                HStack {
-                                    Image(systemName: "circle").padding(.leading)
-                                    Spacer()
-                                    Text("CONTINUE WITH \(service.uppercased())").padding(.leading, -18)
-                                    Spacer()
-                                }.frame(maxWidth: .infinity, maxHeight: 45)
-                                .overlay(
-                                        RoundedRectangle(cornerRadius: 50)
-                                        .stroke(lineWidth: 1)
-                                            .foregroundColor(.gray)
-                                )
-                            }).padding(.top, 8)
+                            SecondaryButton(text: service)
+                                .padding(.top, 8)
                         }
                         
-                        Button(action: {
-                            print("[AUTHVIEW] Login Button Pressed")
-                        }, label: {
-                            HStack {
-                                Text("LOG IN")
-                            }.frame(maxWidth: .infinity, maxHeight: 50)
-                        }).padding(.top, 8)
-                        .padding(.bottom, reader.safeAreaInsets.bottom + 32)
+                        TertiaryButton(text: "Log In")
+                            .padding(.bottom, reader.safeAreaInsets.bottom + 32)
+                        
                     }.font(.custom("Gotham-Medium", size: 11))
                     .foregroundColor(.white)
                     .padding([.leading, .trailing], 32)
                 }
             }.edgesIgnoringSafeArea(.all)
         }
+    }
+}
+
+struct PrimaryButton: View {
+    var text: String
+    
+    var body: some View {
+        Button(action: {
+            print("[AUTHVIEW] Signup Button Pressed")
+        }, label: {
+            Text(text.uppercased())
+                .frame(maxWidth: .infinity, maxHeight: 45)
+                .background(Color.green)
+                .cornerRadius(50)
+        }).padding(.top, 16)
+    }
+}
+
+struct SecondaryButton: View {
+    var text: String
+    
+    var body: some View {
+        Button(action: {
+            print("[AUTHVIEW] \(text) Button Pressed")
+        }, label: {
+            HStack {
+                Image(systemName: "circle").padding(.leading)
+                Spacer()
+                Text("CONTINUE WITH \(text.uppercased())").padding(.leading, -18)
+                Spacer()
+            }.frame(maxWidth: .infinity, maxHeight: 45)
+            .overlay(
+                    RoundedRectangle(cornerRadius: 50)
+                    .stroke(lineWidth: 1)
+                        .foregroundColor(.gray)
+            )
+        }).padding(.top, 8)
+    }
+}
+
+struct TertiaryButton: View {
+    var text: String
+    
+    var body: some View {
+        Button(action: {
+            print("[AUTHVIEW] \(text) Button Pressed")
+        }, label: {
+            HStack {
+                Text(text.uppercased())
+            }.frame(maxWidth: .infinity, maxHeight: 50)
+        }).padding(.top, 8)
     }
 }
 
