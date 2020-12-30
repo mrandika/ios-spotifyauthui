@@ -61,7 +61,7 @@ struct PrimaryButton: View {
     
     var body: some View {
         Button(action: {
-            print("[AUTHVIEW] Signup Button Pressed")
+            print("[AUTHVIEW] \(text) Button Pressed")
         }, label: {
             Text(text.uppercased())
                 .frame(maxWidth: .infinity, maxHeight: 45)
@@ -81,7 +81,8 @@ struct SecondaryButton: View {
             HStack {
                 Image(systemName: "circle").padding(.leading)
                 Spacer()
-                Text("CONTINUE WITH \(text.uppercased())").padding(.leading, -18)
+                Text("CONTINUE WITH \(text.uppercased())")
+                    .padding(.trailing)
                 Spacer()
             }.frame(maxWidth: .infinity, maxHeight: 45)
             .overlay(
